@@ -42,7 +42,7 @@ class MainActivity : ComponentActivity() {
             val players = dbHelper.getAllPlayers()
             Log.d("TavlApp", "Players alındı: ${players.size}")
 
-            // Eğer hiç oyuncu yoksa, iki varsayılan oyuncu ekle
+            // Eğer hiç oyuncu yoksa, iki varsayılan oyuncu ekle...
             if (players.isEmpty()) {
                 Log.d("TavlApp", "Varsayılan oyuncular ekleniyor...")
                 dbHelper.addPlayer("Oyuncu 1")
