@@ -77,6 +77,7 @@ class MainActivity : ComponentActivity() {
         }
     }
 }
+// Test değişikliği - GitHub Desktop kontrol
 
 // Ana ekranımızı oluşturan Composable fonksiyon
 @Composable
