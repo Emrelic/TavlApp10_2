@@ -49,6 +49,7 @@ class MainActivity : ComponentActivity() {
                 dbHelper.addPlayer("Oyuncu 2")
                 Log.d("TavlApp", "Varsayılan oyuncular EKLENDİ")
             }
+            // işte deneme yorum satırı
 
             Log.d("TavlApp", "setContent başlıyor...")
             // setContent ile Compose UI'ı başlatıyoruz
