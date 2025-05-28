@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <application
+        android:allowBackup="true"
+        android:dataExtractionRules="@xml/data_extraction_rules"
+        android:fullBackupContent="@xml/backup_rules"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.TavlApp"
+        tools:targetApi="31">
+
+        <!-- Maç Detay Aktivitesi -->
+        <activity
+            android:name=".MatchDetailActivity"
+            android:exported="false"
+            android:theme="@style/Theme.TavlApp" />
+
+        <!-- Oyuncu İstatistikleri Aktivitesi -->
+        <activity
+            android:name=".PlayerStatsActivity"
+            android:exported="false"
+            android:theme="@style/Theme.TavlApp" />
+
+        <!-- İkili Karşılaşma İstatistikleri Aktivitesi -->
+        <activity
+            android:name=".PlayerVsPlayerActivity"
+            android:exported="false"
+            android:theme="@style/Theme.TavlApp" />
+
+        <activity
+            android:name=".GameHistoryActivity"
+            android:exported="false" />
+
+        <!-- Skor Ekranı Aktivitesi -->
+        <activity
+            android:name=".GameScoreActivity"
+            android:exported="false"
+            android:configChanges="orientation|screenSize|screenLayout|keyboardHidden"
+            android:theme="@style/Theme.TavlApp" />
+
+        <activity
+            android:name=".MainActivity"
+            android:exported="true"
+            android:label="@string/app_name"
+            android:theme="@style/Theme.TavlApp">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <!-- Yeni Oyun Aktivitesi -->
+        <activity
+            android:name=".NewGameActivity"
+            android:exported="false"
+            android:theme="@style/Theme.TavlApp" />
+    </application>
+
+</manifest>

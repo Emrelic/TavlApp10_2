@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <Button
+            android:id="@+id/btnNewGame"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="Yeni Oyun Aç"
+            app:layout_constraintBottom_toTopOf="@+id/btnGameHistory"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:layout_editor_absoluteX="146dp" />
+
+        <Button
+            android:id="@+id/btnGameHistory"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="Oyun Geçmişi"
+            app:layout_constraintBottom_toTopOf="@+id/btnExit"
+            app:layout_constraintEnd_toEndOf="@+id/btnNewGame"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="@+id/btnNewGame"
+            app:layout_constraintTop_toBottomOf="@+id/btnNewGame" />
+
+        <Button
+            android:id="@+id/btnExit"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="Çıkış"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="@+id/btnGameHistory"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="@+id/btnGameHistory"
+            app:layout_constraintTop_toBottomOf="@+id/btnGameHistory" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</LinearLayout>
