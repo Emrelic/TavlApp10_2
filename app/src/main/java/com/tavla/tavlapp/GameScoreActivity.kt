@@ -2310,7 +2310,7 @@ fun GameScreen(
             }
         }
 
-        // Katlama Zarı - Sadece Modern tavla için görünür
+        // Katlama Zarı - Sadece Modern tavla için görünür.
         if (!isTraditionalGame) {
             Box(
                 modifier = Modifier
