@@ -2324,7 +2324,7 @@ fun GameScreen(
                         when (doublingCubePosition) {
                             DoublingCubePosition.PLAYER1_CONTROL -> if (player1CanDouble) player1OfferDouble()
                             DoublingCubePosition.PLAYER2_CONTROL -> if (player2CanDouble) player2OfferDouble()
-                            else -> {} // Diğer pozisyonlarda tıklama işlevi yok
+                            else -> {} // Diğer pozisyonlarda tıklama işlevi yok.
                         }
                     },
                 contentAlignment = Alignment.Center
