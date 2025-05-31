@@ -562,7 +562,7 @@ fun GameScreen(
                             modifier = Modifier
                                 .padding(8.dp)
                                 .width(120.dp) // Sabit genişlik - yatay/dikey aynı
-                                .height(48.dp) // Sabit yükseklik - yatay/dikey aynı
+                                .height(70.dp) // Sabit yükseklik - yatay/dikey aynı
                         ) {
                             Text(
                                 text = "Katla",
@@ -804,7 +804,7 @@ fun GameScreen(
                             modifier = Modifier
                                 .padding(8.dp)
                                 .width(120.dp) // Sabit genişlik - yatay/dikey aynı
-                                .height(48.dp) // Sabit yükseklik - yatay/dikey aynı
+                                .height(70.dp) // Sabit yükseklik - yatay/dikey aynı
                         ) {
                             Text(
                                 text = "Katla",
