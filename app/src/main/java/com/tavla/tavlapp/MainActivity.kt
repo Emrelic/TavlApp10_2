@@ -33,7 +33,7 @@ class MainActivity : ComponentActivity() {
             super.onCreate(savedInstanceState)
             Log.d("TavlApp", "super.onCreate TAMAM")
 
-            // Veritabanını başlat ve varsayılan oyuncuları kontrol et
+            // Veritabanını başlat ve varsayılan oyuncuları kontrol et....
             Log.d("TavlApp", "DatabaseHelper oluşturuluyor...")
             val dbHelper = DatabaseHelper(this)
             Log.d("TavlApp", "DatabaseHelper TAMAM")
