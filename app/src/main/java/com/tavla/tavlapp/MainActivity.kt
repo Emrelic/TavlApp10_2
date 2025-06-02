@@ -24,7 +24,7 @@ import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import android.util.Log
 
-// Ana aktivitemizi tanımlıyoruz. ComponentActivity, Compose kullanımı için bir temel sınıftır
+// Ana aktivitemizi tanımlıyoruz. ComponentActivity, Compose kullanımı için bir temel sınıftır..
 class MainActivity : ComponentActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -49,6 +49,7 @@ class MainActivity : ComponentActivity() {
                 dbHelper.addPlayer("Oyuncu 2")
                 Log.d("TavlApp", "Varsayılan oyuncular EKLENDİ")
             }
+            // işte deneme yorum satırı
 
             Log.d("TavlApp", "setContent başlıyor...")
             // setContent ile Compose UI'ı başlatıyoruz

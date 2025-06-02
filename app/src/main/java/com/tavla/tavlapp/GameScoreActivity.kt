@@ -533,7 +533,7 @@ fun GameScreen(
                         style = MaterialTheme.typography.titleLarge
                     )
 
-                    Spacer(modifier = Modifier.height(16.dp))
+                    Spacer(modifier = Modifier.height(10.dp))
 
                     // Skor
                     Text(
@@ -544,7 +544,7 @@ fun GameScreen(
                     )
 
                     // Skor ile butonlar arasında ek boşluk
-                    Spacer(modifier = Modifier.height(24.dp))
+                    Spacer(modifier = Modifier.height(6.dp))
 
                     // Katla butonu - Oyuncu 1 için
                     if (!isTraditionalGame && !showPlayer1DoublingMenu && !showPlayer2DoublingMenu &&
@@ -552,7 +552,7 @@ fun GameScreen(
                                 doublingCubePosition == DoublingCubePosition.PLAYER1_CONTROL) &&
                         player1CanDouble
                     ) {
-                        Spacer(modifier = Modifier.height(20.dp))
+                        Spacer(modifier = Modifier.height(4.dp))
                         Button(
                             onClick = { player1OfferDouble() },
                             shape = RoundedCornerShape(4.dp),
@@ -562,7 +562,7 @@ fun GameScreen(
                             modifier = Modifier
                                 .padding(8.dp)
                                 .width(120.dp) // Sabit genişlik - yatay/dikey aynı
-                                .height(48.dp) // Sabit yükseklik - yatay/dikey aynı
+                                .height(70.dp) // Sabit yükseklik - yatay/dikey aynı
                         ) {
                             Text(
                                 text = "Katla",
@@ -775,7 +775,7 @@ fun GameScreen(
                         style = MaterialTheme.typography.titleLarge
                     )
 
-                    Spacer(modifier = Modifier.height(16.dp))
+                    Spacer(modifier = Modifier.height(10.dp))
 
                     // Skor
                     Text(
@@ -786,7 +786,7 @@ fun GameScreen(
                     )
 
                     // Skor ile butonlar arasında ek boşluk
-                    Spacer(modifier = Modifier.height(24.dp))
+                    Spacer(modifier = Modifier.height(6.dp))
 
                     // Katla butonu - Oyuncu 2 için
                     if (!isTraditionalGame && !showPlayer1DoublingMenu && !showPlayer2DoublingMenu &&
@@ -794,7 +794,7 @@ fun GameScreen(
                                 doublingCubePosition == DoublingCubePosition.PLAYER2_CONTROL) &&
                         player2CanDouble
                     ) {
-                        Spacer(modifier = Modifier.height(20.dp))
+                        Spacer(modifier = Modifier.height(4.dp))
                         Button(
                             onClick = { player2OfferDouble() },
                             shape = RoundedCornerShape(4.dp),
@@ -804,7 +804,7 @@ fun GameScreen(
                             modifier = Modifier
                                 .padding(8.dp)
                                 .width(120.dp) // Sabit genişlik - yatay/dikey aynı
-                                .height(48.dp) // Sabit yükseklik - yatay/dikey aynı
+                                .height(70.dp) // Sabit yükseklik - yatay/dikey aynı
                         ) {
                             Text(
                                 text = "Katla",
@@ -2310,7 +2310,7 @@ fun GameScreen(
             }
         }
 
-        // Katlama Zarı - Sadece Modern tavla için görünür
+        // Katlama Zarı - Sadece Modern tavla için görünür.
         if (!isTraditionalGame) {
             Box(
                 modifier = Modifier
@@ -2324,7 +2324,7 @@ fun GameScreen(
                         when (doublingCubePosition) {
                             DoublingCubePosition.PLAYER1_CONTROL -> if (player1CanDouble) player1OfferDouble()
                             DoublingCubePosition.PLAYER2_CONTROL -> if (player2CanDouble) player2OfferDouble()
-                            else -> {} // Diğer pozisyonlarda tıklama işlevi yok
+                            else -> {} // Diğer pozisyonlarda tıklama işlevi yok.
                         }
                     },
                 contentAlignment = Alignment.Center
