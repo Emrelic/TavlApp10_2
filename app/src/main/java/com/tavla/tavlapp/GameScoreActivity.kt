@@ -529,7 +529,7 @@ fun GameScreen(
                     // Oyuncu adı
                     Text(
                         text = "$player1Name ($player1RoundsWon)",
-                        color = Color.White,
+                        color = Color.Black,
                         style = MaterialTheme.typography.titleLarge
                     )
 
@@ -538,7 +538,7 @@ fun GameScreen(
                     // Skor
                     Text(
                         text = player1Score.toString(),
-                        color = Color.White,
+                        color = Color.Black,
                         style = MaterialTheme.typography.displayLarge,
                         fontSize = 60.sp
                     )
@@ -557,16 +557,16 @@ fun GameScreen(
                             onClick = { player1OfferDouble() },
                             shape = RoundedCornerShape(4.dp),
                             colors = ButtonDefaults.buttonColors(
-                                containerColor = Color.White.copy(alpha = 0.3f)
+                                containerColor = Color.White.copy(alpha = 0.8f)
                             ),
                             modifier = Modifier
                                 .padding(8.dp)
-                                .width(120.dp) // Sabit genişlik - yatay/dikey aynı
-                                .height(70.dp) // Sabit yükseklik - yatay/dikey aynı
+                                .width(if (isLandscape) 100.dp else 120.dp) // Yatay modda daha küçük
+                                .height(if (isLandscape) 50.dp else 70.dp) // Yatay modda daha düşük
                         ) {
                             Text(
                                 text = "Katla",
-                                color = Color.White,
+                                color = Color.Black,
                                 fontSize = 16.sp, // Sabit font boyutu
                                 fontWeight = FontWeight.Bold
                             )
@@ -592,11 +592,12 @@ fun GameScreen(
                                     ),
                                     modifier = Modifier
                                         .weight(1f)
-                                        .height(56.dp) // Daha yüksek buton
+                                        .height(if (isLandscape) 45.dp else 56.dp) // Yatay modda daha düşük
                                 ) {
                                     Text(
-                                        text = "✓ Kabul Et",
-                                        fontSize = 14.sp, // Daha büyük font
+                                         text = "✓ Kabul Et",
+    color = Color.White,
+                                        fontSize = if (isLandscape) 12.sp else 14.sp, // Yatay modda daha küçük font
                                         fontWeight = FontWeight.Bold,
                                         maxLines = 1,
                                         overflow = TextOverflow.Ellipsis,
@@ -614,11 +615,11 @@ fun GameScreen(
                                     ),
                                     modifier = Modifier
                                         .weight(1f)
-                                        .height(56.dp) // Daha yüksek buton
+                                        .height(if (isLandscape) 45.dp else 56.dp) // Yatay modda daha düşük
                                 ) {
                                     Text(
                                         text = "✗ Pes Et",
-                                        fontSize = 14.sp, // Daha büyük font
+                                        fontSize = if (isLandscape) 12.sp else 14.sp, // Yatay modda daha küçük font
                                         fontWeight = FontWeight.Bold,
                                         maxLines = 1,
                                         overflow = TextOverflow.Ellipsis,
@@ -636,11 +637,11 @@ fun GameScreen(
                                     ),
                                     modifier = Modifier
                                         .weight(1f)
-                                        .height(56.dp) // Daha yüksek buton
+                                        .height(if (isLandscape) 45.dp else 56.dp) // Yatay modda daha düşük
                                 ) {
                                     Text(
                                         text = "↩ İptal",
-                                        fontSize = 14.sp, // Daha büyük font
+                                        fontSize = if (isLandscape) 12.sp else 14.sp, // Yatay modda daha küçük font
                                         fontWeight = FontWeight.Bold,
                                         maxLines = 1,
                                         overflow = TextOverflow.Ellipsis,
@@ -755,7 +756,7 @@ fun GameScreen(
                     // Metin (arka planın üzerinde)
                     Text(
                         text = "$targetRounds",
-                        color = Color.White,
+                        color = Color.Black,
                         style = MaterialTheme.typography.displayMedium,
                         fontWeight = FontWeight.Bold
                     )
@@ -771,7 +772,7 @@ fun GameScreen(
                     // Oyuncu adı
                     Text(
                         text = "$player2Name ($player2RoundsWon)",
-                        color = Color.White,
+                        color = Color.Black,
                         style = MaterialTheme.typography.titleLarge
                     )
 
@@ -780,7 +781,7 @@ fun GameScreen(
                     // Skor
                     Text(
                         text = player2Score.toString(),
-                        color = Color.White,
+                        color = Color.Black,
                         style = MaterialTheme.typography.displayLarge,
                         fontSize = 60.sp
                     )
@@ -799,16 +800,16 @@ fun GameScreen(
                             onClick = { player2OfferDouble() },
                             shape = RoundedCornerShape(4.dp),
                             colors = ButtonDefaults.buttonColors(
-                                containerColor = Color.White.copy(alpha = 0.3f)
+                                containerColor = Color.White.copy(alpha = 0.8f)
                             ),
                             modifier = Modifier
                                 .padding(8.dp)
-                                .width(120.dp) // Sabit genişlik - yatay/dikey aynı
-                                .height(70.dp) // Sabit yükseklik - yatay/dikey aynı
+                                .width(if (isLandscape) 100.dp else 120.dp) // Yatay modda daha küçük
+                                .height(if (isLandscape) 50.dp else 70.dp) // Yatay modda daha düşük
                         ) {
                             Text(
                                 text = "Katla",
-                                color = Color.White,
+                                color = Color.Black,
                                 fontSize = 16.sp, // Sabit font boyutu
                                 fontWeight = FontWeight.Bold
                             )
@@ -834,11 +835,12 @@ fun GameScreen(
                                     ),
                                     modifier = Modifier
                                         .weight(1f)
-                                        .height(56.dp) // Daha yüksek buton
+                                        .height(if (isLandscape) 45.dp else 56.dp) // Yatay modda daha düşük
                                 ) {
                                     Text(
-                                        text = "✓ Kabul Et",
-                                        fontSize = 14.sp, // Daha büyük font
+                                         text = "✓ Kabul Et",
+    color = Color.White,
+                                        fontSize = if (isLandscape) 12.sp else 14.sp, // Yatay modda daha küçük font
                                         fontWeight = FontWeight.Bold,
                                         maxLines = 1,
                                         overflow = TextOverflow.Ellipsis,
@@ -856,11 +858,11 @@ fun GameScreen(
                                     ),
                                     modifier = Modifier
                                         .weight(1f)
-                                        .height(56.dp) // Daha yüksek buton
+                                        .height(if (isLandscape) 45.dp else 56.dp) // Yatay modda daha düşük
                                 ) {
                                     Text(
                                         text = "✗ Pes Et",
-                                        fontSize = 14.sp, // Daha büyük font
+                                        fontSize = if (isLandscape) 12.sp else 14.sp, // Yatay modda daha küçük font
                                         fontWeight = FontWeight.Bold,
                                         maxLines = 1,
                                         overflow = TextOverflow.Ellipsis,
@@ -878,11 +880,11 @@ fun GameScreen(
                                     ),
                                     modifier = Modifier
                                         .weight(1f)
-                                        .height(56.dp) // Daha yüksek buton
+                                        .height(if (isLandscape) 45.dp else 56.dp) // Yatay modda daha düşük
                                 ) {
                                     Text(
                                         text = "↩ İptal",
-                                        fontSize = 14.sp, // Daha büyük font
+                                        fontSize = if (isLandscape) 12.sp else 14.sp, // Yatay modda daha küçük font
                                         fontWeight = FontWeight.Bold,
                                         maxLines = 1,
                                         overflow = TextOverflow.Ellipsis,
@@ -971,7 +973,7 @@ fun GameScreen(
             // Mevcut el bilgisi
             Text(
                 text = "El: $currentRound",
-                color = Color.White,
+                color = Color.Black,
                 style = MaterialTheme.typography.titleMedium,
                 modifier = Modifier
                     .fillMaxWidth()
@@ -1010,7 +1012,7 @@ fun GameScreen(
                                         ) {
                                             Text(
                                                 text = "Tek Oyun",
-                                                color = Color.White,
+                                                color = Color.Black,
                                                 modifier = Modifier.padding(8.dp)
                                             )
                                         }
@@ -1021,7 +1023,7 @@ fun GameScreen(
                                         onClick = { addRound(player1Id, player1Name, "SINGLE", 1) },
                                         shape = RoundedCornerShape(4.dp),
                                         colors = ButtonDefaults.buttonColors(
-                                            containerColor = Color.White.copy(alpha = 0.3f)
+                                            containerColor = Color.White.copy(alpha = 0.8f)
                                         ),
                                         modifier = Modifier
                                             .weight(1f)
@@ -1040,7 +1042,7 @@ fun GameScreen(
                                             )
                                             Text(
                                                 text = "1P",
-                                                fontSize = 14.sp, // Daha büyük font
+                                                fontSize = if (isLandscape) 12.sp else 14.sp, // Yatay modda daha küçük font
                                                 fontWeight = FontWeight.Bold,
                                                 textAlign = TextAlign.Center,
                                                 color = Color.White
@@ -1059,7 +1061,7 @@ fun GameScreen(
                                         ) {
                                             Text(
                                                 text = "Mars",
-                                                color = Color.White,
+                                                color = Color.Black,
                                                 modifier = Modifier.padding(8.dp)
                                             )
                                         }
@@ -1070,7 +1072,7 @@ fun GameScreen(
                                         onClick = { addRound(player1Id, player1Name, "MARS", 2) },
                                         shape = RoundedCornerShape(4.dp),
                                         colors = ButtonDefaults.buttonColors(
-                                            containerColor = Color.White.copy(alpha = 0.3f)
+                                            containerColor = Color.White.copy(alpha = 0.8f)
                                         ),
                                         modifier = Modifier
                                             .weight(1f)
@@ -1117,7 +1119,7 @@ fun GameScreen(
                                         ) {
                                             Text(
                                                 text = "Tek Oyun",
-                                                color = Color.White,
+                                                color = Color.Black,
                                                 modifier = Modifier.padding(8.dp)
                                             )
                                         }
@@ -1128,7 +1130,7 @@ fun GameScreen(
                                         onClick = { addRound(player2Id, player2Name, "SINGLE", 1) },
                                         shape = RoundedCornerShape(4.dp),
                                         colors = ButtonDefaults.buttonColors(
-                                            containerColor = Color.White.copy(alpha = 0.3f)
+                                            containerColor = Color.White.copy(alpha = 0.8f)
                                         ),
                                         modifier = Modifier
                                             .weight(1f)
@@ -1166,7 +1168,7 @@ fun GameScreen(
                                         ) {
                                             Text(
                                                 text = "Mars",
-                                                color = Color.White,
+                                                color = Color.Black,
                                                 modifier = Modifier.padding(8.dp)
                                             )
                                         }
@@ -1177,7 +1179,7 @@ fun GameScreen(
                                         onClick = { addRound(player2Id, player2Name, "MARS", 2) },
                                         shape = RoundedCornerShape(4.dp),
                                         colors = ButtonDefaults.buttonColors(
-                                            containerColor = Color.White.copy(alpha = 0.3f)
+                                            containerColor = Color.White.copy(alpha = 0.8f)
                                         ),
                                         modifier = Modifier
                                             .weight(1f)
@@ -1232,7 +1234,7 @@ fun GameScreen(
                                         ) {
                                             Text(
                                                 text = "Tek Oyun",
-                                                color = Color.White,
+                                                color = Color.Black,
                                                 modifier = Modifier.padding(8.dp)
                                             )
                                         }
@@ -1243,7 +1245,7 @@ fun GameScreen(
                                         onClick = { addRound(player1Id, player1Name, "SINGLE", 1) },
                                         shape = RoundedCornerShape(4.dp),
                                         colors = ButtonDefaults.buttonColors(
-                                            containerColor = Color.White.copy(alpha = 0.3f)
+                                            containerColor = Color.White.copy(alpha = 0.8f)
                                         ),
                                         modifier = Modifier
                                             .weight(1f) // Eşit ağırlık
@@ -1281,7 +1283,7 @@ fun GameScreen(
                                         ) {
                                             Text(
                                                 text = "Mars",
-                                                color = Color.White,
+                                                color = Color.Black,
                                                 modifier = Modifier.padding(8.dp)
                                             )
                                         }
@@ -1292,7 +1294,7 @@ fun GameScreen(
                                         onClick = { addRound(player1Id, player1Name, "MARS", 2) },
                                         shape = RoundedCornerShape(4.dp),
                                         colors = ButtonDefaults.buttonColors(
-                                            containerColor = Color.White.copy(alpha = 0.3f)
+                                            containerColor = Color.White.copy(alpha = 0.8f)
                                         ),
                                         modifier = Modifier
                                             .weight(1f) // Eşit ağırlık
@@ -1339,7 +1341,7 @@ fun GameScreen(
                                         ) {
                                             Text(
                                                 text = "Tek Oyun",
-                                                color = Color.White,
+                                                color = Color.Black,
                                                 modifier = Modifier.padding(8.dp)
                                             )
                                         }
@@ -1350,7 +1352,7 @@ fun GameScreen(
                                         onClick = { addRound(player2Id, player2Name, "SINGLE", 1) },
                                         shape = RoundedCornerShape(4.dp),
                                         colors = ButtonDefaults.buttonColors(
-                                            containerColor = Color.White.copy(alpha = 0.3f)
+                                            containerColor = Color.White.copy(alpha = 0.8f)
                                         ),
                                         modifier = Modifier
                                             .weight(1f) // Eşit ağırlık
@@ -1388,7 +1390,7 @@ fun GameScreen(
                                         ) {
                                             Text(
                                                 text = "Mars",
-                                                color = Color.White,
+                                                color = Color.Black,
                                                 modifier = Modifier.padding(8.dp)
                                             )
                                         }
@@ -1399,7 +1401,7 @@ fun GameScreen(
                                         onClick = { addRound(player2Id, player2Name, "MARS", 2) },
                                         shape = RoundedCornerShape(4.dp),
                                         colors = ButtonDefaults.buttonColors(
-                                            containerColor = Color.White.copy(alpha = 0.3f)
+                                            containerColor = Color.White.copy(alpha = 0.8f)
                                         ),
                                         modifier = Modifier
                                             .weight(1f) // Eşit ağırlık
@@ -1458,7 +1460,7 @@ fun GameScreen(
                                         ) {
                                             Text(
                                                 text = "Tek Oyun",
-                                                color = Color.White,
+                                                color = Color.Black,
                                                 modifier = Modifier.padding(8.dp)
                                             )
                                         }
@@ -1469,7 +1471,7 @@ fun GameScreen(
                                         onClick = { addRound(player1Id, player1Name, "SINGLE", 1) },
                                         shape = RoundedCornerShape(4.dp),
                                         colors = ButtonDefaults.buttonColors(
-                                            containerColor = Color.White.copy(alpha = 0.3f)
+                                            containerColor = Color.White.copy(alpha = 0.8f)
                                         ),
                                         modifier = Modifier
                                             .weight(1f)
@@ -1488,7 +1490,7 @@ fun GameScreen(
                                             )
                                             Text(
                                                 text = "1P",
-                                                fontSize = 14.sp, // Daha büyük font
+                                                fontSize = if (isLandscape) 12.sp else 14.sp, // Yatay modda daha küçük font
                                                 fontWeight = FontWeight.Bold,
                                                 textAlign = TextAlign.Center,
                                                 color = Color.White
@@ -1507,7 +1509,7 @@ fun GameScreen(
                                         ) {
                                             Text(
                                                 text = "Mars",
-                                                color = Color.White,
+                                                color = Color.Black,
                                                 modifier = Modifier.padding(8.dp)
                                             )
                                         }
@@ -1518,7 +1520,7 @@ fun GameScreen(
                                         onClick = { addRound(player1Id, player1Name, "MARS", 2) },
                                         shape = RoundedCornerShape(4.dp),
                                         colors = ButtonDefaults.buttonColors(
-                                            containerColor = Color.White.copy(alpha = 0.3f)
+                                            containerColor = Color.White.copy(alpha = 0.8f)
                                         ),
                                         modifier = Modifier
                                             .weight(1f)
@@ -1556,7 +1558,7 @@ fun GameScreen(
                                         ) {
                                             Text(
                                                 text = "Backgammon",
-                                                color = Color.White,
+                                                color = Color.Black,
                                                 modifier = Modifier.padding(8.dp)
                                             )
                                         }
@@ -1574,7 +1576,7 @@ fun GameScreen(
                                         },
                                         shape = RoundedCornerShape(4.dp),
                                         colors = ButtonDefaults.buttonColors(
-                                            containerColor = Color.White.copy(alpha = 0.3f)
+                                            containerColor = Color.White.copy(alpha = 0.8f)
                                         ),
                                         modifier = Modifier
                                             .weight(1f)
@@ -1621,7 +1623,7 @@ fun GameScreen(
                                         ) {
                                             Text(
                                                 text = "Tek Oyun",
-                                                color = Color.White,
+                                                color = Color.Black,
                                                 modifier = Modifier.padding(8.dp)
                                             )
                                         }
@@ -1632,7 +1634,7 @@ fun GameScreen(
                                         onClick = { addRound(player2Id, player2Name, "SINGLE", 1) },
                                         shape = RoundedCornerShape(4.dp),
                                         colors = ButtonDefaults.buttonColors(
-                                            containerColor = Color.White.copy(alpha = 0.3f)
+                                            containerColor = Color.White.copy(alpha = 0.8f)
                                         ),
                                         modifier = Modifier
                                             .weight(1f)
@@ -1670,7 +1672,7 @@ fun GameScreen(
                                         ) {
                                             Text(
                                                 text = "Mars",
-                                                color = Color.White,
+                                                color = Color.Black,
                                                 modifier = Modifier.padding(8.dp)
                                             )
                                         }
@@ -1681,7 +1683,7 @@ fun GameScreen(
                                         onClick = { addRound(player2Id, player2Name, "MARS", 2) },
                                         shape = RoundedCornerShape(4.dp),
                                         colors = ButtonDefaults.buttonColors(
-                                            containerColor = Color.White.copy(alpha = 0.3f)
+                                            containerColor = Color.White.copy(alpha = 0.8f)
                                         ),
                                         modifier = Modifier
                                             .weight(1f)
@@ -1719,7 +1721,7 @@ fun GameScreen(
                                         ) {
                                             Text(
                                                 text = "Backgammon",
-                                                color = Color.White,
+                                                color = Color.Black,
                                                 modifier = Modifier.padding(8.dp)
                                             )
                                         }
@@ -1737,7 +1739,7 @@ fun GameScreen(
                                         },
                                         shape = RoundedCornerShape(4.dp),
                                         colors = ButtonDefaults.buttonColors(
-                                            containerColor = Color.White.copy(alpha = 0.3f)
+                                            containerColor = Color.White.copy(alpha = 0.8f)
                                         ),
                                         modifier = Modifier
                                             .weight(1f)
@@ -1791,7 +1793,7 @@ fun GameScreen(
                                         ) {
                                             Text(
                                                 text = "Tek Oyun",
-                                                color = Color.White,
+                                                color = Color.Black,
                                                 modifier = Modifier.padding(8.dp)
                                             )
                                         }
@@ -1802,7 +1804,7 @@ fun GameScreen(
                                         onClick = { addRound(player1Id, player1Name, "SINGLE", 1) },
                                         shape = RoundedCornerShape(4.dp),
                                         colors = ButtonDefaults.buttonColors(
-                                            containerColor = Color.White.copy(alpha = 0.3f)
+                                            containerColor = Color.White.copy(alpha = 0.8f)
                                         ),
                                         modifier = Modifier
                                             .weight(1f) // Eşit ağırlık
@@ -1843,7 +1845,7 @@ fun GameScreen(
                                         ) {
                                             Text(
                                                 text = "Mars",
-                                                color = Color.White,
+                                                color = Color.Black,
                                                 modifier = Modifier.padding(8.dp)
                                             )
                                         }
@@ -1854,7 +1856,7 @@ fun GameScreen(
                                         onClick = { addRound(player1Id, player1Name, "MARS", 2) },
                                         shape = RoundedCornerShape(4.dp),
                                         colors = ButtonDefaults.buttonColors(
-                                            containerColor = Color.White.copy(alpha = 0.3f)
+                                            containerColor = Color.White.copy(alpha = 0.8f)
                                         ),
                                         modifier = Modifier
                                             .weight(1f) // Eşit ağırlık
@@ -1895,7 +1897,7 @@ fun GameScreen(
                                         ) {
                                             Text(
                                                 text = "Backgammon",
-                                                color = Color.White,
+                                                color = Color.Black,
                                                 modifier = Modifier.padding(8.dp)
                                             )
                                         }
@@ -1913,7 +1915,7 @@ fun GameScreen(
                                         },
                                         shape = RoundedCornerShape(4.dp),
                                         colors = ButtonDefaults.buttonColors(
-                                            containerColor = Color.White.copy(alpha = 0.3f)
+                                            containerColor = Color.White.copy(alpha = 0.8f)
                                         ),
                                         modifier = Modifier
                                             .weight(1f) // Eşit ağırlık
@@ -1962,7 +1964,7 @@ fun GameScreen(
                                         ) {
                                             Text(
                                                 text = "Tek Oyun",
-                                                color = Color.White,
+                                                color = Color.Black,
                                                 modifier = Modifier.padding(8.dp)
                                             )
                                         }
@@ -1973,7 +1975,7 @@ fun GameScreen(
                                         onClick = { addRound(player2Id, player2Name, "SINGLE", 1) },
                                         shape = RoundedCornerShape(4.dp),
                                         colors = ButtonDefaults.buttonColors(
-                                            containerColor = Color.White.copy(alpha = 0.3f)
+                                            containerColor = Color.White.copy(alpha = 0.8f)
                                         ),
                                         modifier = Modifier
                                             .weight(1f) // Eşit ağırlık
@@ -2014,7 +2016,7 @@ fun GameScreen(
                                         ) {
                                             Text(
                                                 text = "Mars",
-                                                color = Color.White,
+                                                color = Color.Black,
                                                 modifier = Modifier.padding(8.dp)
                                             )
                                         }
@@ -2025,7 +2027,7 @@ fun GameScreen(
                                         onClick = { addRound(player2Id, player2Name, "MARS", 2) },
                                         shape = RoundedCornerShape(4.dp),
                                         colors = ButtonDefaults.buttonColors(
-                                            containerColor = Color.White.copy(alpha = 0.3f)
+                                            containerColor = Color.White.copy(alpha = 0.8f)
                                         ),
                                         modifier = Modifier
                                             .weight(1f) // Eşit ağırlık
@@ -2066,7 +2068,7 @@ fun GameScreen(
                                         ) {
                                             Text(
                                                 text = "Backgammon",
-                                                color = Color.White,
+                                                color = Color.Black,
                                                 modifier = Modifier.padding(8.dp)
                                             )
                                         }
@@ -2084,7 +2086,7 @@ fun GameScreen(
                                         },
                                         shape = RoundedCornerShape(4.dp),
                                         colors = ButtonDefaults.buttonColors(
-                                            containerColor = Color.White.copy(alpha = 0.3f)
+                                            containerColor = Color.White.copy(alpha = 0.8f)
                                         ),
                                         modifier = Modifier
                                             .weight(1f) // Eşit ağırlık
@@ -2133,7 +2135,7 @@ fun GameScreen(
                             player1Score++
                         },
                         shape = RoundedCornerShape(4.dp),
-                        colors = ButtonDefaults.buttonColors(containerColor = Color.White.copy(alpha = 0.3f)),
+                        colors = ButtonDefaults.buttonColors(containerColor = Color.White.copy(alpha = 0.8f)),
                         modifier = Modifier
                             .weight(1f)
                             .height(60.dp)
@@ -2154,7 +2156,7 @@ fun GameScreen(
                             if (player1Score > 0) player1Score--
                         },
                         shape = RoundedCornerShape(4.dp),
-                        colors = ButtonDefaults.buttonColors(containerColor = Color.White.copy(alpha = 0.3f)),
+                        colors = ButtonDefaults.buttonColors(containerColor = Color.White.copy(alpha = 0.8f)),
                         modifier = Modifier
                             .weight(1f)
                             .height(60.dp)
@@ -2197,7 +2199,7 @@ fun GameScreen(
                             if (player2Score > 0) player2Score--
                         },
                         shape = RoundedCornerShape(4.dp),
-                        colors = ButtonDefaults.buttonColors(containerColor = Color.White.copy(alpha = 0.3f)),
+                        colors = ButtonDefaults.buttonColors(containerColor = Color.White.copy(alpha = 0.8f)),
                         modifier = Modifier
                             .weight(1f)
                             .height(60.dp)
@@ -2218,7 +2220,7 @@ fun GameScreen(
                             player2Score++
                         },
                         shape = RoundedCornerShape(4.dp),
-                        colors = ButtonDefaults.buttonColors(containerColor = Color.White.copy(alpha = 0.3f)),
+                        colors = ButtonDefaults.buttonColors(containerColor = Color.White.copy(alpha = 0.8f)),
                         modifier = Modifier
                             .weight(1f)
                             .height(60.dp)
